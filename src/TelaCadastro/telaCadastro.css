@@ -1,0 +1,166 @@
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.divPrincipal {
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.divLogo img{
+    width: 150px;
+    height: 150px;
+}
+
+.h1{
+    color: black;
+    margin-top: -20px;
+}
+
+.divEmail{
+    height: 80px;
+    width: 80px;
+    margin: -10px;
+    
+}
+.divEmail input:focus{
+    border-bottom: 2px solid aqua;
+    transition: 0.5s;
+}
+  
+.labelEmail {
+    font-size: 20px;
+    margin-left: -150px;
+    color: black;
+    margin-top: 50px;
+    
+   
+    
+}
+
+.inputEmail{
+    /* background-color: aqua; */
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border-color: rgb(215, 194, 194);
+    margin-left: -65px;
+    border-bottom: 2px solid rgb(18, 12, 12);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    outline: 0;
+    
+}
+
+.divSenha{
+    margin-top: 20px;
+}
+.divSenha input:focus{
+    border-bottom: 2px solid aqua;
+    transition: 0.5s;
+}
+
+
+.labelSenha{
+    font-size: 20px;
+    margin-left: -150px;
+    color: black;
+    margin-top: 50px;
+    
+}
+
+.inputSenha{
+    /* background-color: aqua; */
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border-color: rgb(215, 194, 194);
+    margin-left: -8px;
+    border-bottom: 2px solid rgb(18, 12, 12);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    outline: 0;
+    
+}
+
+
+.divConfirmeSenha{
+margin-left: -22px;
+
+}
+
+
+
+.labelConfirmeSenha{
+    font-size: 20px;
+    margin-left: 200px;
+    color: black;
+    margin-top: 50px;
+    margin-left: -10px;
+    
+}
+
+.inputConfirmeSenha{
+    /* background-color: aqua; */
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+    border-color: rgb(225, 201, 201);
+    margin-left: 15px;
+    border-bottom: 2px solid rgb(18, 12, 12);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    outline: 0;
+}
+.divConfirmeSenha input:focus{
+    border-bottom: 2px solid aqua;
+    transition: 0.5s;
+}
+
+.buttonCriarConta{
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: -5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    border-color:  rgb(97, 164, 222);
+    
+}
+.buttonCriarConta:hover{
+    transition: 0.2s;
+    background-color: rgb(97, 164, 222);
+    border: none;
+    color: white;
+    border-bottom: 2px solid rgb(174, 170, 170);
+    outline: 0;
+}
+.buttonCriarConta:focus {
+    transition-duration: 0.2s;
+    background-color: black;
+    color: rgb(97, 164, 222);
+
+}
+
+
+/* teste {
+    transition: 0.5s ease-in-out;
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+} */
