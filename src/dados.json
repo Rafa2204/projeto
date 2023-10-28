@@ -1,0 +1,14 @@
+{
+    "publicacoes":[
+        {
+            "id": 1,
+            "conteudo": "...",
+            "foto": "...",
+            "localizacao": "...",
+            "curtidas": 1,
+            "usuario":{
+                "nome":"..."
+            }
+        }
+    ]
+}

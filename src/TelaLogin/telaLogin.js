@@ -1,7 +1,14 @@
 import telaLogin from  "../TelaLogin/telaLogin.css"
 import logo from '../img/Logo.png'
+import Home from '../TelaHome/telaHome'
 
 const TelaLogin = () => {
+
+    const BTelaLogin = () => {
+        const localhostURL = 'http://localhost:3000/Home';
+            window.open(localhostURL, 'blank')
+    }
+
     return(
         <div className="divPrincipal">
 
@@ -27,7 +34,7 @@ const TelaLogin = () => {
             </div>
 
             <div>
-                <button className="buttonEntrar">Entrar</button>
+                <button className="buttonEntrar" onClick={BTelaLogin}>Entrar</button>
 
             </div>
 

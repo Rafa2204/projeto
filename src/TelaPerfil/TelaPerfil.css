@@ -1,0 +1,120 @@
+
+.cabecalho{
+    width: 600px;
+    height: 120px;
+    border: 2px solid black;
+    margin-top: 260px;
+}
+
+.cabecalho img{
+width: 50px;
+}
+.imLogo {
+    margin-top: 15px;
+    margin-left: 22px;
+    width: 60px;
+    height: 40px;
+}
+
+.imLogo img{
+    margin-top: 12px;
+    width: 80px;
+    
+}
+
+.buttonSubir{
+    margin-top: -29px;
+   
+}
+.buttonSubir button{
+    margin-left: 350px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.buttonSubir button:hover{
+    background-color: #b5b5b5;
+    transition: 0.5s;
+    
+}
+.buttonSubir button:focus{
+    transition: 0.5s;
+    background-color: rgb(97, 164, 222);
+    
+}
+.labelDestaque {
+   margin-left: 344px;
+   margin-top: 5px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+/* /////////////////////////////////////// */
+
+.SuasPublicacoes h1{
+    margin-left: 50px;
+}
+
+
+/* ///////////////////////////////// */
+
+.NomeUsuario{
+    width: 500px;
+    height: 100px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.FotoPerfilUsuario button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-top: 14px;
+    margin-left: 15px;
+    border: 1px solid black;
+}
+.FotoPerfilUsuario button:hover{
+    background-color: rgb(97, 164, 222);
+    cursor: pointer;
+}
+.NomeUsuarioH1 {
+    margin-top: -78px;
+    margin-left: 100px;
+}
+.ButtonEditarPerfil{
+    margin-left: 400px;
+    margin-top: -70px;
+    
+}
+.ButtonEditarPerfil button{
+    background-color: white;
+    border: none;
+}
+.ButtonEditarPerfil button:hover{
+    background-color: #b5b5b5;
+    border-radius: 5px;
+    color: white;
+}
+
+
+/* //////////////////////////////// */
+
+.PublicacoesTelaPerfil{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+
+
+
+
+

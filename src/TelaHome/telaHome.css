@@ -1,0 +1,284 @@
+
+.cabecalho{
+    width: 600px;
+    height: 120px;
+    border: 2px solid black;
+    margin-top: 520px;
+}
+
+.cabecalho img{
+width: 50px;
+}
+.imLogo {
+    margin-top: 15px;
+    margin-left: 22px;
+    width: 60px;
+    height: 40px;
+}
+
+.imLogo img{
+    margin-top: 12px;
+    width: 80px;
+    
+}
+
+.buttonSubir{
+    margin-top: -29px;
+   
+}
+.buttonSubir button{
+    margin-left: 350px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.buttonSubir button:hover{
+    background-color: #b5b5b5;
+    transition: 0.5s;
+    
+}
+.buttonSubir button:focus{
+    transition: 0.5s;
+    background-color: rgb(97, 164, 222);
+    
+}
+.labelDestaque {
+   margin-left: 344px;
+   margin-top: 5px;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+/* ///////////// */
+
+.buttonDestaque{
+    margin-top: -36px;
+}
+
+.buttonDestaque button{
+    margin-left: 437px;
+    margin-top: -60px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonDestaque button:hover{
+    background-color: #b5b5b5;
+    transition: 0.5s;
+}
+.buttonDestaque button:focus{
+    transition: 0.5s;
+    background-color: rgb(97, 164, 222);
+}
+
+
+.labelEstrela{
+    margin-left: 432px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* /////////////// */
+
+.buttonPerfil {
+margin-top: -36px;
+}
+.buttonPerfil button{
+    margin-left: 513px;
+   margin-top: -70px;
+   border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonPerfil button:hover{
+    background-color: #b5b5b5;
+    transition: 0.5s;
+}
+.buttonPerfil button:focus{
+    transition: 0.5s;
+    background-color: rgb(97, 164, 222);
+}
+
+.labelPerfil{
+    margin-left: 518px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* /////////////////// */
+
+.divCorpo{
+    width: 550px;
+    height: 500px;
+    border: 2px solid black;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+.buttonPerfilUsuario{
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.divCorpo label{
+    margin-top: -20px;
+}
+.labelNomeUsuario{
+    margin-left: 60px;
+    margin-top: -35px;
+}
+
+.divRodaPeCorpo1{
+    width: 548px;
+    height: 70px;
+    border: 3px solid black;
+    margin-top: 388px;
+    margin-left: -2px;
+}
+.divButtonLike{
+    width: 50px;
+    height: 50px;
+}
+
+
+.divButtonLike img{
+    width: 45px;
+    height: 45px;
+    margin-left: -3px;
+    margin-top: 2px;
+
+}
+
+.buttonLike {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+}
+.buttonLike:hover {
+    background-color: #b5b5b5;
+}
+.buttonLike:focus {
+    background-color: rgb(97, 164, 222);
+}
+
+/* ////////////// */
+
+.divButtonDesLike img{
+    width: 45px;
+    height: 45px;
+    margin-left: -3px;
+    /* margin-top: 50px; */
+  
+}
+.divButtonDesLike {
+    margin-top: -9px;
+}
+
+
+.buttonDesLike{
+    width: 50px;
+    height: 50px;
+    margin-top: -370px;
+    margin-left: 65px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+}
+.buttonDesLike:hover{
+    background-color: #b5b5b5;
+}
+.buttonDesLike:focus {
+    background-color: rgb(97, 164, 222);
+}
+
+/* ///////////////// */
+
+.divButtonComentar{
+   
+    margin-top: -50px;
+    margin-left: 120px;
+
+}
+.divButtonComentar button:hover{
+    background-color: #b5b5b5;
+}
+.divButtonComentar button:focus{
+    background-color: rgb(97, 164, 222);
+}
+.divButtonComentar button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.divButtonComentar img{
+    width: 45px;
+    height: 45px;
+    margin-left: -4px;
+}
+
+/* ///////////////// */
+
+.divButtonMapa{
+    width: 50px;
+    height: 50px;
+    margin-top: -50px;
+    margin-left: 480px;
+    border: none;
+    cursor: pointer;
+    /* background-color: white; */
+    border-radius: 3px;
+}
+.divButtonMapa button:hover{
+    background-color: #b5b5b5;
+}
+.divButtonMapa button:focus{
+    background-color: rgb(97, 164, 222);
+}
+.divButtonMapa button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.divButtonMapa img{
+    width: 45px;
+    height: 45px;
+    margin-left: -4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ////////////// */
+
+.divCorpo2{
+    width: 550px;
+    height: 350px;
+    border: 2px solid black;
+    margin-top: 30px;
+    margin-left: 25px;
+}
