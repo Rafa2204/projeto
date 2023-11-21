@@ -1,4 +1,4 @@
-import telaHome from "../TelaHome/telaHome.css"
+import styles from "../TelaHome/telaHome.module.css"
 import im from '../img/SubirEnvio.png'
 import imLogo from '../img/Logo.png'
 import imEstrela from '../img/estrela.png'
@@ -10,36 +10,45 @@ import imMapa from '../img/mapa.png'
 
 const TelaHome = () => {
 
-    return(
-        <div> {/* abre divCabeçalho */}
+    const ButtonSubirPublicacao = () => {
+        const localhostURL = 'http://localhost:3000/TelaCriarPublicacao';
+            window.open(localhostURL, 'blank')
+    }
+    const ButtonVaiTelaEditarPerfil = () => {
+        const localhostURL = 'http://localhost:3000/EditarPerfil';
+            window.open(localhostURL, 'blank')
+    }
 
-            <div className="cabecalho">
-                <div className="imLogo">
+    return(
+        <div className={styles.divPrincipal}> {/* abre divCabeçalho */}
+
+            <div className={styles.cabecalho}>
+                <div className={styles.imLogo}>
                     <img src={imLogo}  ></img> 
                 </div>
             
-                <div className="buttonSubir">
-                    <button >
+                <div className={styles.buttonSubir}>
+                    <button onClick={ButtonSubirPublicacao}>
                         <img src={im}></img>   
                     </button>            
                 </div>
-                <label className="labelDestaque">Publicar</label>
+                <label className={styles.labelDestaque}>Publicar</label>
 
 
-                <div className="buttonDestaque">
+                <div className={styles.buttonDestaque}>
                     <button>
                         <img src={imEstrela}></img>
                     </button> 
                 </div>
-                <label className="labelEstrela">Destaque</label>
+                <label className={styles.labelEstrela}>Destaque</label>
 
 
-                <div className="buttonPerfil">
-                    <button>
+                <div className={styles.buttonPerfil}>
+                    <button onClick={ButtonVaiTelaEditarPerfil}>
                         <img src={imPerfil}></img>
                     </button> 
                 </div>
-                <label className="labelPerfil">Perfil</label>
+                <label className={styles.labelPerfil}>Perfil</label>
 
             </div> {/* fecha divCabeçalho */}
 
@@ -47,36 +56,36 @@ const TelaHome = () => {
 
             <div > {/* abre divCorpo */}
            
-            <div className="divCorpo">
+            <div className={styles.divCorpo}>
                 <div>
-                    <button className="buttonPerfilUsuario"></button>
+                    <button className={styles.buttonPerfilUsuario}></button>
                 </div>
 
-                <div className="labelNomeUsuario">
+                <div className={styles.labelNomeUsuario}>
                     <label>** Nome do Usuario **</label>
                 </div>
                 
-                <div className="divRodaPeCorpo1">
+                <div className={styles.divRodaPeCorpo1}>
 
-                    <div className="divButtonLike">
-                        <button className="buttonLike"> 
+                    <div className={styles.divButtonLike}>
+                        <button className={styles.buttonLike}> 
                             <img src={imLike}></img>
                         </button>
                     </div>
 
-                    <div className="divButtonDesLike">
-                        <button className="buttonDesLike">
+                    <div className={styles.divButtonDesLike}>
+                        <button className={styles.buttonDesLike}>
                             <img src={imDesLike}></img>
                         </button>
                     </div>
 
-                    <div className="divButtonComentar">
+                    <div className={styles.divButtonComentar}>
                         <button>
                             <img src={imComentario}></img>
                         </button>
                     </div>
 
-                    <div className="divButtonMapa">
+                    <div className={styles.divButtonMapa}>
                         <button >
                             <img src={imMapa}></img>
                         </button>
@@ -86,7 +95,7 @@ const TelaHome = () => {
 
             </div>
 
-            <div className="divCorpo2">
+            <div className={styles.divCorpo2}>
                 <button> </button>
                 <label>Nome do Usuario</label>
             </div>

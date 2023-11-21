@@ -9,6 +9,7 @@ import BvaiTelaLogin from './TelaCadastro/telaCadastro'
 import TelaHome from './TelaHome/telaHome';
 import TelaPerfil from './TelaPerfil/TelaPerfil'
 import TelaEditarPerfil from './TelaEditarPerfil/TelaEditarPerfil'
+import TelaCriarPublicacao from './TelaCriarPublicacao/TelaCriarPublicacao'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/NomeUsuario' element={<TelaNomeUsuario />}/>
           <Route path='/Perfil' element={<TelaPerfil />}/>
           <Route path='/EditarPerfil' element={<TelaEditarPerfil />}/>
+          <Route path='/TelaCriarPublicacao' element={<TelaCriarPublicacao />}/>
         </Routes>
       </BrowserRouter>
              

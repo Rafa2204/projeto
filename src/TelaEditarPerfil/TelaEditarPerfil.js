@@ -10,14 +10,19 @@ const TelaEditarPerfil = () => {
             window.open(localhostURL, 'blank')
     }
 
+    const ButtonVaiTelaHome = () => {
+        const localhostURL = 'http://localhost:3000/Home';
+            window.open(localhostURL, 'blank')
+    }
+
     return(
         <div className='DivPrincipalEditarPerfil'>  {/* abre div Principal */}
 
             <div>
-                <h1>Editando seu Perfil</h1>
+                <h1 className='H1EditandoSeuPerfil'>Editando seu Perfil</h1>
             </div>
             <div>
-                <h3>Adicionar uma nova Foto</h3>
+                <h3 className='H3AdicionarFoto'>Adicionar uma nova Foto</h3>
             </div>
             <div className='ButtonAddFoto'>
                 <button>
@@ -26,16 +31,16 @@ const TelaEditarPerfil = () => {
             </div>
 
             <div>
-                <h3>Mudar nome de Usuario</h3>
-                <input></input>
+                <h3 className='H3MudarNomeUsuario'>Mudar nome de Usuario</h3>
+                <input className='inputMudarNomeUsuario'></input>
             </div>
 
             <div>
-                <h3>Mudar Senha:</h3>
-                <label>Senha Atual:</label> <p />
-                <input></input> <p />
-                <label>Nova Senha:</label> <p />
-                <input></input>
+                <h3 className='H3MudarSenha'>Mudar Senha:</h3>
+                <label className='labelSenhaAtual'>Senha Atual:</label> <p />
+                <input type='password' placeholder=' Insira sua Senha Atual:' className='InputSenhaAtual'></input> <p />
+                <label className='labelNovaSenha'>Nova Senha:</label> <p />
+                <input type='password' placeholder=' Insira sua Nova Senha:' className='InputNovaSenha'></input>
             </div>
 
 {/* //////////////////////////////////////// */}
@@ -47,11 +52,11 @@ const TelaEditarPerfil = () => {
                     <button>Salvar Alterações</button>
                 </div>
                 
-                <div>
-                    <button>Cancelar</button>
+                <div className='ButtonCancelar'>
+                    <button onClick={ButtonVaiTelaHome}>Cancelar</button>
                 </div>
 
-                <div>
+                <div className='ButtonExcluirSeuPerfil'>
                     <button>Excluir seu Perfil</button>
                 </div>
 

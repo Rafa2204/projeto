@@ -1,5 +1,3 @@
-
-
   
 .divPrincipal {
     text-align: center;
@@ -12,6 +10,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .divLogo img{
@@ -84,7 +83,7 @@
     border-radius: 5px;
     border: none;
     border-color: rgb(215, 194, 194);
-    margin-left: -8px;
+    margin-left: 25px;
     border-bottom: 2px solid rgb(18, 12, 12);
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -143,3 +142,31 @@
     margin-left: -4px;
     margin-top: 10px;
 }
+
+
+
+/* //////////// */
+
+/* .divSenhaLogin button{
+       
+} */
+
+.imgOlho {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: none;
+}
+
+ .imgOlho img{
+    width: 35px;
+   height: 35px;
+   background-color: white;
+   cursor: pointer;
+  
+}
+
+.imgOlho img:hover{
+    background-color:  rgb(97, 164, 222);
+    border-radius: 5px;
+} 

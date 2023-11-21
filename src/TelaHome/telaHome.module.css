@@ -1,16 +1,19 @@
+.divPrincipal{
+    margin-top: 150px;
+}
 
 .cabecalho{
     width: 600px;
-    height: 120px;
+    height: 100px;
     border: 2px solid black;
-    margin-top: 520px;
+    margin-top: 300px;
 }
 
 .cabecalho img{
 width: 50px;
 }
 .imLogo {
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 22px;
     width: 60px;
     height: 40px;
@@ -22,12 +25,16 @@ width: 50px;
     
 }
 
+
+/* /////////////////////////// */
+
+
 .buttonSubir{
-    margin-top: -29px;
+    margin-top: -27px;
    
 }
 .buttonSubir button{
-    margin-left: 350px;
+    margin-left: 366px;
     border: none;
     background-color: white;
     border-radius: 5px;
@@ -35,16 +42,16 @@ width: 50px;
 }
 .buttonSubir button:hover{
     background-color: #b5b5b5;
-    transition: 0.5s;
+    transition: 0.2s;
     
 }
 .buttonSubir button:focus{
-    transition: 0.5s;
+    transition: 0.2s;
     background-color: rgb(97, 164, 222);
     
 }
 .labelDestaque {
-   margin-left: 344px;
+   margin-left: 358px;
    margin-top: 5px;
    font-family: 'Courier New', Courier, monospace;
 }
@@ -52,12 +59,12 @@ width: 50px;
 /* ///////////// */
 
 .buttonDestaque{
-    margin-top: -36px;
+    margin-top: -40px;
 }
 
 .buttonDestaque button{
-    margin-left: 437px;
-    margin-top: -60px;
+    margin-left: 450px;
+    margin-top: -55px;
     border: none;
     background-color: white;
     border-radius: 5px;
@@ -65,26 +72,27 @@ width: 50px;
 }
 .buttonDestaque button:hover{
     background-color: #b5b5b5;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .buttonDestaque button:focus{
-    transition: 0.5s;
+    transition: 0.2s;
     background-color: rgb(97, 164, 222);
 }
 
 
 .labelEstrela{
-    margin-left: 432px;
+    
+    margin-left: 443px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 /* /////////////// */
 
 .buttonPerfil {
-margin-top: -36px;
+    margin-top: -40px;
 }
 .buttonPerfil button{
-    margin-left: 513px;
+    margin-left: 525px;
    margin-top: -70px;
    border: none;
     background-color: white;
@@ -93,15 +101,15 @@ margin-top: -36px;
 }
 .buttonPerfil button:hover{
     background-color: #b5b5b5;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .buttonPerfil button:focus{
-    transition: 0.5s;
+    transition: 0.2s;
     background-color: rgb(97, 164, 222);
 }
 
 .labelPerfil{
-    margin-left: 518px;
+    margin-left: 528px;
     font-family: 'Courier New', Courier, monospace;
 }
 

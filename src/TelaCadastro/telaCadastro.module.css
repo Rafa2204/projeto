@@ -4,13 +4,14 @@
     text-align: center;
     background-color: white;
     width: 500px;
-    height: 600px;
+    height: 550px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .divLogo img{
@@ -39,6 +40,7 @@
     margin-left: -150px;
     color: black;
     margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
     
    
     
@@ -56,6 +58,7 @@
     transition: 0.5s ease-in-out;
     cursor: pointer;
     outline: 0;
+    
     
 }
 
@@ -88,6 +91,7 @@
     transition: 0.5s ease-in-out;
     cursor: pointer;
     outline: 0;
+    margin-left: 25px;
     
 }
 
@@ -120,6 +124,7 @@ margin-left: -22px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
     outline: 0;
+    margin-left: 45px;
 }
 .divConfirmeSenha input:focus{
     border-bottom: 2px solid rgb(97, 164, 222);
@@ -150,6 +155,33 @@ margin-left: -22px;
     background-color: black;
     color: rgb(97, 164, 222);
 
+}
+
+.buttonOcultarSenha2{
+    width: 3px;
+   height: 15px;
+   cursor: pointer;
+}
+
+.imgOlho {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: none;
+}
+
+
+.imgOlho img{
+    width: 35px;
+   height: 35px;
+   background-color: white;
+   cursor: pointer;
+  
+}
+
+.imgOlho img:hover{
+    background-color:  rgb(97, 164, 222);
+    border-radius: 5px;
 }
 
 
