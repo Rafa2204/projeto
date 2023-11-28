@@ -5,43 +5,87 @@ import axios from 'axios';
 import logo from '../img/Logo.png';
 import styles from '../TelaCadastro/telaCadastro.module.css';
 import olho  from '../img/olho.png'
+import api from '../TelaLogin/ApiTokenConfiguration';
+
+
 
 const TelaCadastro = () => {
+
+  const BTelaLogin = () => {
+    const localhostURL = 'http://localhost:3000/Login';
+      window.open(localhostURL, 'blank')
+}
+
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-//   const [name, setName] = useState('');
-//   const [adress, setAdress] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [confirmaSenha, setConfirmacao] = useState('');
-const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [name, setName] = useState('');
+  const [mostrarSenha, setMostrarSenha] = useState(false);
+  const [confirmeSenha, setConfirmeSenha] = useState('');
+  
+  // const [adress, setAdress] = useState('');
+  //   const [phone, setPhone] = useState('');
+  //   const [confirmaSenha, setConfirmacao] = useState('');
+  // const [admin, setAdmin] = useState('');
 
-
+  
   const postUser = async () => {
     const data = {
+      name: name,
       email: email,
       senha: senha,
-    //   name: name,
-    //   adress: adress,
-    //   phone: phone,
-    };
-
-    try {
-      const response = await axios.post('http://localhost:8080/cidadao', data);
-      console.log('Usuário criado com sucesso:', response.data);
-    } catch (error) {
-      console.error('Erro ao criar usuário:', error);
+     
+    // adress: adress,
+    //  admin: admin,
+    //  phone: phone,
     }
+      if(senha == confirmeSenha){
+        try {
+          const response = await axios.post('http://localhost:8080/cidadao', data);
+          console.log('Usuário criado com sucesso:', response.data);
+          var formData = new FormData();
+          var imagefile = document.querySelector('#file');
+          formData.append("image", imagefile.files[0]);
+          axios.post(`http://localhost:8080/cidadao/${response.data.id}/photo`, {
+            formData
+          }, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          })
+          .then(function (response) {
+            console.log(response);
+          });
+          BTelaLogin();
+        } catch (error) {
+          console.error('Erro ao criar usuário:', error);
+          console.log("teste trycat")
+        }
+      }else{
+        alert("Sua senha deve ser Igual!")
+        
+      }
+
+      
+    
+    
+  
+
+  
   };
+  
 
   useEffect(() => {
-    postUser();
+    
     console.log("foi")
-  }, []); // Executa apenas uma vez ao montar o componente
+  }, []); // O [] executa apenas uma vez ao montar o componente
+
 
   const toggleMostrarSenha = () => {
     setMostrarSenha(!mostrarSenha);
   };
  
+
+  
 
 
 
@@ -56,6 +100,24 @@ const [mostrarSenha, setMostrarSenha] = useState(false);
             <div className={styles.h1}>
                 <h1>Tela de cadastro</h1>
             </div>
+
+            <div className={styles.divEmail}>
+                <label className = {styles.labelEmail}> Nome:  </label><p />
+                <input 
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)} 
+                    className={styles.inputEmail} 
+                    
+                    placeholder="Digite seu Nome: ">
+                </input><p />
+
+                <input
+                
+                  id="file"
+
+                type='file'></input>
+            
+            </div><p />
 
             <div className={styles.divEmail}>
                 <label className = {styles.labelEmail}> Email:  </label><p />
@@ -94,6 +156,8 @@ const [mostrarSenha, setMostrarSenha] = useState(false);
             <div className={styles.divConfirmeSenha}>
                 <label className ={styles.labelConfirmeSenha}> Confirme sua Senha:  </label><p />
                 <input 
+                value={confirmeSenha} 
+                onChange={(e) => setConfirmeSenha(e.target.value)} 
                     className={styles.inputConfirmeSenha} 
                     type={mostrarSenha ? 'text' : 'password'}
                     placeholder="Confirme sua senha: ">

@@ -1,16 +1,57 @@
 import style from '../TelaCriarPublicacao/TelaCriarPublicacao.module.css'
 import im from '../img/SubirEnvio.png'
 import imMapa from '../img/mapa.png'
+import React, { useEffect, useState } from 'react';
 
+import api from '../TelaLogin/ApiTokenConfiguration';
 
 
 
 const TelaCriarPublicacao = () => {
 
-    const ButtonVaiTelaCriarPublicacao = () => {
-        const localhostURL = 'http://localhost:3000/TelaCriarPublicacao';
+
+    const [textoPublicacao, setTextoPublicacao] = useState('');
+
+    const BTelaHome = () => {
+        const localhostURL = 'http://localhost:3000/Home';
             window.open(localhostURL, 'blank')
     }
+
+        const postPub = async () => {
+            const data = {
+                textoPublicacao: textoPublicacao,
+                
+            };
+
+            // const Validaçao
+    
+            try {
+                const response = await api.post('http://localhost:8080/publicacao', data);
+                console.log('dados salvo', response.data.texto);
+                BTelaHome()
+                // if (response.data.token) {
+                //     console.log("comparo")
+                //     localStorage.setItem('token', response.data.token);
+                //     // Redirecionar para a próxima página
+                    
+                // } else {
+                //     console.log('Login falhou. Mensagem do servidor:', response.data.mensagem);
+                // }
+
+                
+
+
+            } catch (error) {
+                console.error('Erro ao salvar', error);
+            }
+
+        }
+
+    useEffect(() => {
+        console.log("foi")
+    
+    }, []); 
+
 
     return(
         <div className={style.DivPrincipalTelaCriarPublicacao}>
@@ -23,7 +64,9 @@ const TelaCriarPublicacao = () => {
             </div>
 
             <div className={style.divInput}>
-                <input placeholder='Digite aqui sua novidade...'></input>
+                <input placeholder='Digite aqui sua novidade...'
+                value={textoPublicacao} 
+                onChange={(e) => setTextoPublicacao(e.target.value)}  ></input>
 
 
             </div>
@@ -49,8 +92,9 @@ const TelaCriarPublicacao = () => {
                 </div>
 
                 
-                <div className={style.divButtonPublicar}>
-                    <button>Publicar</button>
+                <div
+                className={style.divButtonPublicar}>
+                    <button onClick={postPub} >Publicar</button>
                 </div>
 
 

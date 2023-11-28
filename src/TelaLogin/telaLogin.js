@@ -1,47 +1,80 @@
 import styles from "../TelaLogin/telaLogin.module.css"
 import logo from '../img/Logo.png'
-import Home from '../TelaHome/telaHome'
 import React, { useState, useEffect } from 'react';
 import olho  from '../img/olho.png'
 import axios from 'axios';
 
+
 const TelaLogin = () => {
-
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    // const [mostrarSenha, setMostrarSenha] = useState(false);
-    const [mostrarSenha, setMostrarSenha] = useState(false);
-  
-  
-    const postUser = async () => {
-      const data = {
-        email: email,
-        senha: senha,
-    
-      };
-  
-      try {
-        const response = await axios.get('http://localhost:8080/cidadao', data);
-        console.log('Usuário criado com sucesso:', response.data);
-      } catch (error) {
-        console.error('Erro ao criar usuário:', error);
-      }
-    };
-  
-    useEffect(() => {
-      postUser();
-      console.log("foi")
-    }, []); 
-
 
     const BTelaLogin = () => {
         const localhostURL = 'http://localhost:3000/Home';
             window.open(localhostURL, 'blank')
     }
 
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [mostrarSenha, setMostrarSenha] = useState(false);
+    
+
+        const postUser = async () => {
+            const data = {
+                login: email,
+                password: senha,
+                
+            };
+
+            // const Validaçao
+    
+            try {
+                const response = await axios.post('http://localhost:8080/login', data);
+                console.log('dados salvo', response.data);
+        
+                if (response.data.token) {
+                    console.log("comparo")
+
+                    localStorage.setItem('token', response.data.token);
+            
+
+                    // Redirecionar para a próxima página
+                    BTelaLogin();
+
+
+
+                } else {
+                    console.log('Login falhou. Mensagem do servidor:', response.data.mensagem);
+                }
+
+                
+
+
+            } catch (error) {
+                console.error('Erro ao salvar', error);
+            }
+        
+
+            // try {
+            //     const response = await axios.post('http://localhost:8080/login', data);
+            //     console.log('dados salvo', response.data);
+            // }
+            // catch(error){
+            //     console.error('Erro ao salvar', error);
+            // }
+
+        }
+
+    useEffect(() => {
+        console.log("foi")
+    
+    }, []); 
+  
+ 
+
     const toggleMostrarSenha = () => {
         setMostrarSenha(!mostrarSenha);
-      };
+    };
+
+
 
     return(
         <div className={styles.divPrincipal}>
@@ -61,8 +94,8 @@ const TelaLogin = () => {
                 </label><p />
                 
                 <input
-                    // value={email} 
-                    // onChange={(e) => setEmail(e.target.value)}  
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)}  
                     className={styles.inputEmailLogin} 
                     placeholder="Digite seu Email: ">
                 </input><p />
@@ -73,8 +106,8 @@ const TelaLogin = () => {
             <div className={styles.divSenhaLogin}>
                 <label className = {styles.labelSenhaLogin}> Senha:  </label><p />
                 <input 
-                    // value={senha} 
-                    // onChange={(e) => setSenha(e.target.value)} 
+                    value={senha} 
+                    onChange={(e) => setSenha(e.target.value)} 
                     className={styles.inputSenhaLogin} 
                     placeholder="Digite sua senha: "
                     type={mostrarSenha ? 'text' : 'password'} >
@@ -93,7 +126,10 @@ const TelaLogin = () => {
             </div>
 
             <div>
-                <button className={styles.buttonEntrar} onClick={BTelaLogin}>Entrar</button>
+                <button 
+                    className={styles.buttonEntrar} 
+                    onClick={postUser}>Entrar
+                </button>
 
             </div>
 

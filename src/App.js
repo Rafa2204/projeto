@@ -11,6 +11,7 @@ import TelaPerfil from './TelaPerfil/TelaPerfil'
 import TelaEditarPerfil from './TelaEditarPerfil/TelaEditarPerfil'
 import TelaCriarPublicacao from './TelaCriarPublicacao/TelaCriarPublicacao'
 
+
 function App() {
   return (
     <div>

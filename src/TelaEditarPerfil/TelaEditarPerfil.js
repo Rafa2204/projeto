@@ -3,6 +3,10 @@ import '../TelaEditarPerfil/TelaEditarPerfil.css'
 import imPerfil from '../img/perfil.png'
 import imLogo from '../img/Logo.png'
 
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
+import api from '../TelaLogin/ApiTokenConfiguration';
+
 const TelaEditarPerfil = () => {
 
     const ButtonVaiTelaEditarPerfil = () => {
@@ -14,6 +18,44 @@ const TelaEditarPerfil = () => {
         const localhostURL = 'http://localhost:3000/Home';
             window.open(localhostURL, 'blank')
     }
+    const BTelaCadastro = () => {
+        const localhostURL = 'http://localhost:3000/Cadastro';
+          window.open(localhostURL, 'blank')
+    }
+
+
+
+
+    const [name, setName] = useState([]);
+
+    //Fazer a requisição à API
+    const deletecidadao = () =>{
+        try{
+            api.delete(`http://localhost:8080/cidadao`)
+            BTelaCadastro()
+        }catch (error) {
+            console.error('Erro ao apagar:', error);
+            console.log("teste apagar")
+
+
+        }
+    }
+    
+
+
+    useEffect(() => {
+        // Fazer a requisição à API para obter a lista de publicações
+        axios.get('http://localhost:8080/cidadao')
+          .then(response => {
+            setName(response.data);
+          })
+          .catch(error => {
+            console.error('Erro ao obter a lista de publicações:', error);
+          });
+      }, []);
+    
+
+
 
     return(
         <div className='DivPrincipalEditarPerfil'>  {/* abre div Principal */}
@@ -32,7 +74,13 @@ const TelaEditarPerfil = () => {
 
             <div>
                 <h3 className='H3MudarNomeUsuario'>Mudar nome de Usuario</h3>
-                <input className='inputMudarNomeUsuario'></input>
+                <input 
+
+
+
+                className='inputMudarNomeUsuario'
+                placeholder=' Adicione um Nome de Usuario'></input>
+                
             </div>
 
             <div>
@@ -57,8 +105,10 @@ const TelaEditarPerfil = () => {
                 </div>
 
                 <div className='ButtonExcluirSeuPerfil'>
-                    <button>Excluir seu Perfil</button>
+                    <button
+                    onClick={deletecidadao}>Excluir seu Perfil</button>
                 </div>
+
 
 
 
@@ -73,3 +123,40 @@ const TelaEditarPerfil = () => {
     )
 }
 export default TelaEditarPerfil
+
+
+
+
+// // Home.jsx
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+
+// const Home = () => {
+//     // const [publicacoes, setPublicacoes] = useState([]);
+
+// //   useEffect(() => {
+// //     // Fazer a requisição à API para obter a lista de publicações
+// //     axios.get('sua-url-da-api/publicacoes')
+// //       .then(response => {
+// //         setPublicacoes(response.data);
+// //       })
+// //       .catch(error => {
+// //         console.error('Erro ao obter a lista de publicações:', error);
+// //       });
+// //   }, []);
+
+//   return (
+//     <div>
+//       <h1>Feed de Publicações</h1>
+//       {/* <ul>
+//         {publicacoes.map(publicacao => (
+//           <li key={publicacao.id}>
+//             <strong>{publicacao.cidadao.nome}</strong>: {publicacao.texto}
+//           </li>
+//         ))}
+//       </ul> */}
+//     </div>
+//   );
+// };
+
+// export default Home;

@@ -7,6 +7,12 @@ import imLike from '../img/like.png'
 import imDesLike from '../img/deslike.png'
 import imComentario from '../img/comentario.png'
 import imMapa from '../img/mapa.png'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import api from "../TelaLogin/ApiTokenConfiguration"
+
+// import React, { useState, useEffect } from 'react';
+// import api from '../TelaLogin/ApiTokenConfiguration';
 
 const TelaHome = () => {
 
@@ -18,6 +24,39 @@ const TelaHome = () => {
         const localhostURL = 'http://localhost:3000/EditarPerfil';
             window.open(localhostURL, 'blank')
     }
+
+
+
+    const [publicacoes, setPublicacoes] = useState([]);
+    const token = localStorage.getItem('token');
+    const [publicacao, setPublicacao] = useState('');
+
+
+
+    // Fazer a requisição à API
+    api.get('http://localhost:8080/publicacao')
+    .then(response => {
+    const publicacao = response.data;
+    console.log(publicacao)
+    })
+    .catch(error => {
+    console.error('Erro ao obter informações da publicação:', error);
+    });
+
+
+
+    useEffect(() => {
+        // Fazer a requisição à API para obter a lista de publicações
+        api.get('http://localhost:8080/publicacao')
+          .then(response => {
+            setPublicacoes(response.data);
+          })
+          .catch(error => {
+            console.error('Erro ao obter a lista de publicações:', error);
+          });
+      }, []);
+
+
 
     return(
         <div className={styles.divPrincipal}> {/* abre divCabeçalho */}
@@ -62,7 +101,29 @@ const TelaHome = () => {
                 </div>
 
                 <div className={styles.labelNomeUsuario}>
-                    <label>** Nome do Usuario **</label>
+                <div>
+                    <ul className={styles.labelNomeUsuario}>
+                        {publicacoes.map(publicacao => (
+                            <li key={publicacao.id}>
+                                <strong>{publicacao.citizen}
+                                </strong>
+                            </li>
+                        ))}
+                    </ul>
+
+
+                    <ul className={styles.ulTexto}>
+                        {publicacoes.map(publicacao => (
+                            <li key={publicacao.id}>
+                                <strong></strong>{publicacao.textoPublicacao}
+                            </li>
+                        ))}
+                    </ul>
+                    
+
+                </div>
+
+
                 </div>
                 
                 <div className={styles.divRodaPeCorpo1}>
@@ -102,6 +163,17 @@ const TelaHome = () => {
 
             </div> {/* fecha divCorpo */}
 
+            <div>
+            <input
+                    // value={textoPublicacao} 
+                    // onChange={(e) => setTextoPublicacao(e.target.value)}  
+                    >
+                </input><p />
+
+            </div>
+
+            
+
         </div>
 
         
@@ -109,3 +181,8 @@ const TelaHome = () => {
 
 }
 export default TelaHome;
+
+
+// Recuperar token do localStorage
+
+
