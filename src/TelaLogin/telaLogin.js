@@ -11,6 +11,10 @@ const TelaLogin = () => {
         const localhostURL = 'http://localhost:3000/Home';
             window.open(localhostURL, 'blank')
     }
+    const BTelaCadastro = () => {
+        const localhostURL = 'http://localhost:3000/Cadastro';
+            window.open(localhostURL, 'blank')
+    }
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -137,7 +141,9 @@ const TelaLogin = () => {
 
             <div className={styles.CadastreseLogin}>
                 <label>Novo no site?</label>
-                <button> Cadastre-se</button>
+                    <button
+                        onClick={BTelaCadastro}> Cadastre-se
+                    </button>
             </div>
 
             <div className={styles.funcionarioPrefeituraLogin}>

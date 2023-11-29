@@ -6,14 +6,16 @@
     margin-right: auto;
     border-radius: 10px;
 }
-.ButtonAddFoto button{
+.ButtonAddFoto img{
     width: 70px;
     height: 70px;
     margin-top: 20px;
-    border-radius: 50px;
+
     margin-left: 20px
 
 }
+
+
 .ButtonAddFoto h1{
 margin-left: 110px;
 margin-top: -55px;
@@ -47,7 +49,7 @@ width: 200px;
 .divButtonEnvioDeImagens button{
     width: 50px;
     height: 50px;
-    margin-top: -5px;
+    margin-top: 40px;
     margin-left: 10px;
     background-color: white;
     border: none;
@@ -62,57 +64,29 @@ width: 200px;
     margin-top: 10px;
     border-radius: 5px;
 }
-.buttonMapa{
-    margin-top: 30px;
-}
+
 
 .imagemSubir:hover{
     background-color: #b5b5b5;
 }
 
-.divImagemMapa {
-    width: 54px;
-    height: 54px;
-    margin-left: 88px;
-    margin-top: -88px;
-    border-radius: 5px;
-    border: none;
-    
-}
-.divImagemMapa button{
-    width: 54px;
-    height: 54px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    cursor: pointer;
-}
-.divImagemMapa button:hover{
-    background-color: #b5b5b5;
-}
-
-.imagemImMapa{
-    width: 56px;
-    height: 56px;
-    margin-left: -5px;
-}
 
 .divButtonInferiores{
     width: 550px;
     height: 90px;
     /* border: 2px solid black; */
-    margin-top: 10px;
+    margin-top: -30px;
 }
 
 .divButtonPublicar{
- 
+ margin-top: -40px;
 }
 
 .divButtonPublicar button{
     width: 120px;
     height: 30px;
     margin-left: 390px;
-    margin-top: -15px;
+    margin-top: -55px;
     font-size: 15px;
     border-color: rgb(97, 164, 222) ;
     border-radius: 5px;

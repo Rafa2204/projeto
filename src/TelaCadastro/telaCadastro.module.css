@@ -184,9 +184,17 @@ margin-left: -22px;
     border-radius: 5px;
 }
 
-
-/* teste {
-    transition: 0.5s ease-in-out;
+.inputSobeImagem button{
+    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 40px;
+    background-color: white;
+    border-bottom: 2px solid rgb(18, 12, 12);
     border: 0;
-    border-bottom: 2px solid rgb(200, 200, 200);
-} */
+    cursor: pointer;
+}
+
+.inputSobeImagem button:focus{
+    background-color: rgb(174, 170, 170);
+}

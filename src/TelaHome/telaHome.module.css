@@ -1,12 +1,12 @@
 .divPrincipal{
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .cabecalho{
     width: 600px;
     height: 100px;
     border: 2px solid black;
-    margin-top: 300px;
+    margin-top: 10px;
 }
 
 .cabecalho img{
@@ -25,16 +25,14 @@ width: 50px;
     
 }
 
-
 /* /////////////////////////// */
-
 
 .buttonSubir{
     margin-top: -27px;
    
 }
 .buttonSubir button{
-    margin-left: 366px;
+    margin-left: 358px;
     border: none;
     background-color: white;
     border-radius: 5px;
@@ -51,7 +49,7 @@ width: 50px;
     
 }
 .labelDestaque {
-   margin-left: 358px;
+   margin-left: 350px;
    margin-top: 5px;
    font-family: 'Courier New', Courier, monospace;
 }
@@ -61,9 +59,8 @@ width: 50px;
 .buttonDestaque{
     margin-top: -40px;
 }
-
 .buttonDestaque button{
-    margin-left: 450px;
+    margin-left: 445px;
     margin-top: -55px;
     border: none;
     background-color: white;
@@ -78,11 +75,9 @@ width: 50px;
     transition: 0.2s;
     background-color: rgb(97, 164, 222);
 }
-
-
 .labelEstrela{
     
-    margin-left: 443px;
+    margin-left: 435px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -113,14 +108,14 @@ width: 50px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* /////////////////// */
+/* ///////////////////           {Fim do Cabeçalho} */
 
 .divCorpo{
     width: 550px;
     height: 500px;
-    border: 2px solid black;
-    margin-top: 30px;
-    margin-left: 25px;
+    /* border: 2px solid black; */
+    margin-top: 100px;
+   margin-left: -75px;
 }
 .buttonPerfilUsuario{
     height: 50px;
@@ -132,32 +127,31 @@ width: 50px;
     margin-top: -20px;
 }
 .labelNomeUsuario{
-    margin-left: 20px;
-    margin-top: -35px;
+    margin-left: 25px;
+    margin-top: -45px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     
 }
 
-.ulTexto{
+/* .ulTexto{
     width: 505px;
     height: 55px;
     border: 4px solid black;
     margin-left: -21px;
-}
+} */
 
 .divRodaPeCorpo1{
     width: 548px;
     height: 70px;
     border: 3px solid black;
     margin-top: 388px;
-    margin-left: -2px;
+   
 }
 .divButtonLike{
     width: 50px;
     height: 50px;
 }
-
 
 .divButtonLike img{
     width: 45px;
@@ -196,7 +190,6 @@ width: 50px;
 .divButtonDesLike {
     margin-top: -9px;
 }
-
 
 .buttonDesLike{
     width: 50px;
@@ -237,7 +230,6 @@ width: 50px;
     cursor: pointer;
     background-color: white;
 }
-
 .divButtonComentar img{
     width: 45px;
     height: 45px;
@@ -270,26 +262,11 @@ width: 50px;
     cursor: pointer;
     background-color: white;
 }
-
 .divButtonMapa img{
     width: 45px;
     height: 45px;
     margin-left: -4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ////////////// */
 
@@ -298,5 +275,31 @@ width: 50px;
     height: 350px;
     border: 2px solid black;
     margin-top: 30px;
-    margin-left: 25px;
+    
 }
+
+.imagemPerfil2{
+    height: 50px;
+    width: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.publicacao{
+    
+    width: 590px;
+    margin-left: -50px;
+    border: 3px solid black;
+    margin: 15px;
+    border-radius: 8px;
+    flex-direction: column;
+    
+ 
+  
+}
+.nomeUsuario{
+    margin-left: 10px;
+}
+.textoPublicacao{
+    margin-left: 10px;
+}
+

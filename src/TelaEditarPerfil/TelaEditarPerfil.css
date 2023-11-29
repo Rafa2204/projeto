@@ -1,5 +1,7 @@
 .H1EditandoSeuPerfil{
-    margin-left: 20px;
+    margin-left: 10px;
+    
+    
 }
 .H3AdicionarFoto{
     margin-left: 20px;
@@ -7,7 +9,7 @@
 
 .DivPrincipalEditarPerfil{
     width: 500px;
-    height: 700px;
+    height: 570px;
     border: 2px solid black;
     margin-top: 150px;
     margin-left: auto;
@@ -130,3 +132,20 @@
 
 }
 
+.imLogo{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+
+}
+.MudarNomeUsuario {
+    margin-left: 110px;
+    margin-top: -53px;
+    font-size: 25px;
+    
+}
+.MudarNomeUsuario2  h3{
+    margin-left: 10px;
+    font-size: 25px;
+    
+}
